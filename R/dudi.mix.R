@@ -105,7 +105,7 @@
         else if (index[i] == "o") {
             w <- X$lw * X$l1[, j]
             w <- X$tab[, col.assign == i] * w
-            w <- apply(w, 2, sum)
+            w <- apply(as.matrix(w), 2, sum)
             return(sum(w^2))
         }
         else if (index[i] == "f") {
